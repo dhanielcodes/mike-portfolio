@@ -3,8 +3,12 @@
     <div class="head">
       <div class="head_content">
         <h2>Hello there!</h2>
-        <p class="head_content_p1">
+        <p class="head_content_p1 one">
           I’m certain you came here wondering what is so<br />
+          great about me, and what I do 😬.
+        </p>
+        <p class="head_content_p1 two">
+          I’m certain you came here wondering what is so
           great about me, and what I do 😬.
         </p>
         <p class="head_content_p2 one">
@@ -54,7 +58,7 @@ export default {};
 .head_content_p2 {
   line-height: 45px;
 }
-.head_content_p2.two {
+.head_content_p2.two, .head_content_p1.two {
   display: none;
 }
 .head_content_p2 span {
@@ -79,10 +83,10 @@ export default {};
   .head_content_p2 {
     line-height: 35px;
   }
-  .head_content_p2.one {
+  .head_content_p2.one, .head_content_p1.one {
     display: none;
   }
-  .head_content_p2.two {
+  .head_content_p2.two, .head_content_p1.two {
     display: block;
   }
   .head_content_p2 span {

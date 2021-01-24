@@ -24,10 +24,10 @@ body {
   background: #f3faff;
 }
 #app {
-  width: 85%;
+  width: 1250px;
   margin: auto;
 }
-@media (max-width: 600px) {
+@media (max-width: 1270px) {
   #app {
     width: 92%;
   }
