@@ -5,7 +5,7 @@
     </router-link>
     <ul class="nav_links">
       <div class="nav_burg" :class="{ open: open }">
-        <div class="overlay" :class="{ open: open }"></div>
+        <div class="overlay" @click="open = false" :class="{ open: open }"></div>
         <div class="burger">
           <svg
             :class="{ open: open }"
@@ -66,7 +66,9 @@ export default {
   setup() {
     const open = ref(false);
 
-    return { open };
+    function toggle() {}
+
+    return { open, toggle };
   },
 };
 </script>
