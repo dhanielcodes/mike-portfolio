@@ -23,13 +23,4 @@ body {
   width: 100%;
   background: #f3faff;
 }
-#app {
-  width: 1250px;
-  margin: auto;
-}
-@media (max-width: 1270px) {
-  #app {
-    width: 92%;
-  }
-}
 </style>

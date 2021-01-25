@@ -77,7 +77,13 @@ export default {
   justify-content: space-between;
   align-items: center;
   min-height: 15vh;
-  width: 100%;
+  width: 1200px;
+  margin: auto;
+}
+@media (max-width: 1270px) {
+  .nav {
+    width: 92%;
+  }
 }
 .nav_logo {
   width: 60px;
@@ -89,7 +95,7 @@ export default {
 .nav_link {
   color: #092133;
   text-decoration: none;
-  margin-right: 30px;
+  margin-left: 30px;
   font-size: 15px;
 }
 .nav_link.nav_cta {
