@@ -181,7 +181,7 @@ export default {
 }
 .head_content_p1 {
   margin-bottom: 40px;
-  line-height: 35px;
+  line-height: 36px;
 }
 .head_content_p2 {
   line-height: 40px;
@@ -348,7 +348,9 @@ export default {
   }
   .head_content p {
     font-size: 17px;
-    line-height: 20px;
+  }
+  .head_content_p1 {
+    line-height: 33px;
   }
   .head_content_p2 {
     line-height: 35px;
