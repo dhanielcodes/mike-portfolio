@@ -368,7 +368,7 @@ export default {
   .projects_case {
     display: flex;
     justify-content: space-evenly;
-    flex-direction: column;
+    flex-direction: column-reverse;
     margin-top: 50px;
     width: 100%;
     border-radius: 10px;
