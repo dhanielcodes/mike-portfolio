@@ -237,7 +237,7 @@ export default {
 .projects_p {
   width: 600px;
   line-height: 30px;
-  margin-bottom: 150px;
+  margin-bottom: 110px;
 }
 .projects_case {
   display: flex;
