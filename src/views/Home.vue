@@ -317,6 +317,9 @@ export default {
   outline: none;
   border-radius: 10px;
   font-size: 15px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 .about button span {
   margin-right: 10px;
