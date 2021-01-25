@@ -236,6 +236,7 @@ export default {
 }
 .projects_p {
   width: 600px;
+  line-height: 30px;
   margin-bottom: 150px;
 }
 .projects_case {
