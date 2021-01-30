@@ -33,16 +33,6 @@
       <p>Scroll down</p>
       <img src="../assets/scroll.svg" alt="" />
     </div>
-    <div class="specs">
-      <div class="specs_team specs_spec">
-        <img src="../assets/team.svg" alt="" srcset="" />
-        <h4>Team player</h4>
-      </div>
-      <div class="specs_time specs_spec">
-        <img src="../assets/time.svg" alt="" srcset="" />
-        <h4>Time delivery</h4>
-      </div>
-    </div>
     <!-- Projects -->
     <div class="projects">
       <h1 class="projects_heading">What I have been up to</h1>
@@ -275,23 +265,6 @@ export default {
 .scroll p {
   margin-bottom: 10px;
 }
-.specs {
-  display: flex;
-  justify-content: space-evenly;
-  align-items: center;
-  flex-wrap: wrap;
-  margin-top: 100px;
-  margin-bottom: 70px;
-}
-.specs_spec {
-  margin: 40px;
-  display: grid;
-  place-items: center;
-}
-.specs_spec img {
-  margin-bottom: 20px;
-}
-
 /* PROJECTS */
 .projects {
   background: #092133;
