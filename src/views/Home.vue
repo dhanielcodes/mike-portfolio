@@ -255,7 +255,7 @@ export default {
   font-weight: 500;
 }
 .head_img {
-  width: 380px;
+  width: 450px;
 }
 .scroll {
   margin: 40px 0;
