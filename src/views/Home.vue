@@ -258,8 +258,8 @@ export default {
   width: 380px;
 }
 .scroll {
-  margin-top: 40px;
-  height: 5vh;
+  margin: 40px 0;
+  min-height: 5vh;
   text-align: center;
 }
 .scroll p {
