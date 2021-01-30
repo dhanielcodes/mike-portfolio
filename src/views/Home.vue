@@ -179,6 +179,7 @@
         </button>
       </div>
     </div>
+    <div class="contact"></div>
   </div>
 </template>
 
@@ -366,7 +367,7 @@ export default {
   display: grid;
   grid-template-columns: repeat(4, 320px);
   grid-gap: 20px;
-  padding: 50px;
+  padding: 50px 0px;
   width: 80%;
   margin: 40px auto;
   overflow: hidden;
@@ -382,7 +383,7 @@ export default {
 .say {
   padding: 20px;
   background: white;
-  width: 320px;
+  width: 100%;
   height: 200px;
   display: flex;
   flex-direction: column;
@@ -524,6 +525,18 @@ export default {
   .projects_case_about_btn {
     font-size: 14px;
     padding: 15px;
+  }
+}
+@media (max-width: 468px) {
+  .says {
+    display: grid;
+    grid-template-columns: repeat(4, 100%);
+    grid-gap: 20px;
+    padding: 50px 0px;
+    width: 95%;
+    margin: 40px auto;
+    overflow: hidden;
+    overflow-x: scroll;
   }
 }
 </style>
