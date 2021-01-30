@@ -1,21 +1,8 @@
 <template>
-  <Nav />
   <router-view></router-view>
-  <Foot />
 </template>
 
-<script>
-import Nav from "./components/Nav.vue";
-import Foot from "./components/footer.vue";
-
-export default {
-  name: "App",
-  components: {
-    Nav,
-    Foot,
-  },
-};
-</script>
+<script></script>
 
 <style>
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800&display=swap");

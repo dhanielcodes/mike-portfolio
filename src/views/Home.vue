@@ -1,5 +1,6 @@
 <template>
   <div>
+    <Nav />
     <!-- TOP -->
     <div class="head">
       <div class="head_content">
@@ -200,12 +201,21 @@
         <button>Get in touch</button>
       </form>
     </div>
+    <Foot />
   </div>
 </template>
 
 <script>
 import { ref } from "vue";
+
+import Nav from "../components/Nav.vue";
+import Foot from "../components/footer.vue";
+
 export default {
+  components: {
+    Nav,
+    Foot,
+  },
   setup() {
     const projects = ref([
       {

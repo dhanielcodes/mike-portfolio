@@ -27,10 +27,12 @@ export default {};
   align-items: center;
   flex-wrap: wrap;
   width: 90%;
-  margin: 20px auto;
+  padding: 20px 0;
+  margin: 0 auto;
 }
 .socials img {
   margin-right: 30px;
+  mix-blend-mode: difference;
 }
 .misc {
   text-align: right;
@@ -39,7 +41,8 @@ export default {};
   margin: 10px 0;
 }
 .misc a {
-  color: black;
+  mix-blend-mode: difference;
+  color: white;
   text-decoration: none;
 }
 @media (max-width: 482px) {
@@ -50,7 +53,7 @@ export default {};
     flex-direction: column;
     height: 170px;
     width: 90%;
-    margin: 20px auto;
+    margin: 0 auto;
   }
   .socials img {
     margin: 0 20px;
