@@ -1,13 +1,19 @@
 <template>
   <Nav />
   <router-view></router-view>
+  <Foot />
 </template>
 
 <script>
-import Nav from "./components/Nav";
+import Nav from "./components/Nav.vue";
+import Foot from "./components/footer.vue";
+
 export default {
   name: "App",
-  components: { Nav },
+  components: {
+    Nav,
+    Foot,
+  },
 };
 </script>
 
