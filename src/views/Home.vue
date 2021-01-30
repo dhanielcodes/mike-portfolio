@@ -86,6 +86,56 @@
     </div>
     <div class="testimonials">
       <h1>Testimonials</h1>
+      <div class="says">
+        <div class="say">
+          <div class="say_person">
+            <img src="../assets/test.png" alt="" srcset="" />
+            <div class="says_person_name">
+              <h5>John Ruffalo</h5>
+              <p>CEO Ron corp</p>
+            </div>
+          </div>
+          <p class="say_desc">
+            “He is very meticuluos with his process it was fun working with him”
+          </p>
+        </div>
+        <div class="say">
+          <div class="say_person">
+            <img src="../assets/test.png" alt="" srcset="" />
+            <div class="says_person_name">
+              <h5>John Ruffalo</h5>
+              <p>CEO Ron corp</p>
+            </div>
+          </div>
+          <p class="say_desc">
+            “He is very meticuluos with his process it was fun working with him”
+          </p>
+        </div>
+        <div class="say">
+          <div class="say_person">
+            <img src="../assets/test.png" alt="" srcset="" />
+            <div class="says_person_name">
+              <h5>John Ruffalo</h5>
+              <p>CEO Ron corp</p>
+            </div>
+          </div>
+          <p class="say_desc">
+            “He is very meticuluos with his process it was fun working with him”
+          </p>
+        </div>
+        <div class="say">
+          <div class="say_person">
+            <img src="../assets/test.png" alt="" srcset="" />
+            <div class="says_person_name">
+              <h5>John Ruffalo</h5>
+              <p>CEO Ron corp</p>
+            </div>
+          </div>
+          <p class="say_desc">
+            “He is very meticuluos with his process it was fun working with him”
+          </p>
+        </div>
+      </div>
     </div>
     <div class="about" id="about">
       <img src="../assets/about-img.png" alt="" />
@@ -157,7 +207,25 @@ export default {
       },
     ]);
 
-    return { projects };
+    const testimonials = ref([
+      {
+        desc: "",
+        name: "",
+        occupation: "",
+      },
+      {
+        desc: "",
+        name: "",
+        occupation: "",
+      },
+      {
+        desc: "",
+        name: "",
+        occupation: "",
+      },
+    ]);
+
+    return { projects, testimonials };
   },
 };
 </script>
@@ -289,7 +357,45 @@ export default {
 }
 /* TESTIMONIALS */
 .testimonials {
+  padding: 50px 20px;
+}
+.testimonials h1 {
+  text-align: center;
+}
+.says {
+  display: grid;
+  grid-template-columns: repeat(4, 320px);
+  grid-gap: 20px;
+  padding: 50px;
+  width: 80%;
+  margin: 40px auto;
+  overflow: hidden;
+  overflow-x: scroll;
+}
+.says::-webkit-scrollbar {
+  height: 5px;
+}
+.says::-webkit-scrollbar-thumb {
+  background: #092133;
+  border-radius: 100px;
+}
+.say {
   padding: 20px;
+  background: white;
+  width: 320px;
+  height: 200px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  border-radius: 10px;
+  box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.118);
+}
+.say_person {
+  display: flex;
+  align-items: center;
+}
+.say_person img {
+  margin-right: 10px;
 }
 /* ABOUT */
 .about {
