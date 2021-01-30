@@ -489,6 +489,16 @@ button {
   .projects {
     padding: 100px;
   }
+  .contact {
+    background: #2fa6ff;
+    padding: 50px;
+  }
+  .contact_fields {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 20px;
+    margin: 40px 0;
+  }
 }
 @media (max-width: 1110px) {
   .head {
@@ -582,6 +592,20 @@ button {
     margin: 40px auto;
     overflow: hidden;
     overflow-x: scroll;
+  }
+  .contact {
+    background: #2fa6ff;
+    padding: 20px;
+  }
+  .contact_fields {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    grid-gap: 20px;
+    margin: 40px 0;
+  }
+  .text {
+    width: 100%;
+    grid-column: 1/2;
   }
 }
 </style>
