@@ -169,7 +169,37 @@
         </button>
       </div>
     </div>
-    <div class="contact"></div>
+    <div class="contact">
+      <h1>Let's work together</h1>
+      <p>Shoot me a message</p>
+
+      <form>
+        <div class="contact_fields">
+          <div class="contact_fields_field">
+            <label for="name">Your Full Name</label>
+            <input placeholder="John Doe" type="text" name="" id="" />
+          </div>
+
+          <div class="contact_fields_field">
+            <label for="name">Email</label>
+            <input placeholder="JohnDoe@email.com" type="text" name="" id="" />
+          </div>
+
+          <div class="contact_fields_field text">
+            <label for="name">Your Message</label>
+            <textarea
+              placeholder="Start typing..."
+              name=""
+              id=""
+              cols="30"
+              rows="10"
+            ></textarea>
+          </div>
+        </div>
+
+        <button>Get in touch</button>
+      </form>
+    </div>
   </div>
 </template>
 
@@ -222,6 +252,9 @@ export default {
 </script>
 
 <style scoped>
+button {
+  cursor: pointer;
+}
 .head {
   display: flex;
   justify-content: space-between;
@@ -406,6 +439,45 @@ export default {
 }
 .about button svg {
   width: 14px;
+}
+.contact {
+  background: #2fa6ff;
+  padding: 50px 200px;
+}
+.contact_fields {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 20px;
+  margin: 40px 0;
+}
+.contact_fields label {
+  font-weight: 500;
+}
+.contact_fields input,
+.contact_fields textarea {
+  width: 100%;
+  padding: 20px;
+  margin-top: 20px;
+  border: none;
+  border-radius: 8px;
+  background: #faf8f8;
+  outline: none;
+}
+.text {
+  width: 100%;
+  grid-column: 1/3;
+}
+.contact button {
+  padding: 17px 30px;
+  background: #092133;
+  color: #2fa6ff;
+  border: none;
+  outline: none;
+  border-radius: 10px;
+  font-size: 15px;
+}
+::placeholder {
+  color: #7d8b95, 100%;
 }
 @media (max-width: 1270px) {
   .head,
