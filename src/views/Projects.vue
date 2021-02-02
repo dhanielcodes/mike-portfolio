@@ -67,7 +67,7 @@
             <h1 class="projects_case_about_title">{{ item.title }}</h1>
             <p class="projects_case_about_desc">{{ item.desc }}</p>
           </div>
-          <a :href="item.link"
+          <a @click="msg" :href="item.link"
             ><button class="projects_case_about_btn">view case study</button></a
           >
         </div>
@@ -90,6 +90,12 @@ export default {
     Foot,
   },
   setup() {
+    function msg() {
+      alert(
+        "I'm sorry i have to take you to another site to view this case study, i still owe the developer a pack of beer😩"
+      );
+    }
+
     const state = reactive({
       projects: [],
       loading: true,
@@ -112,12 +118,15 @@ export default {
 
     const open = ref(false);
 
-    return { open, ...toRefs(state) };
+    return { msg, open, ...toRefs(state) };
   },
 };
 </script>
 
 <style scoped>
+button {
+  cursor: pointer;
+}
 .load {
   margin-top: 20px;
 }

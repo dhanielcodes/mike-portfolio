@@ -41,8 +41,9 @@
       <p class="projects_p">
         Asides the times I am building amazing user experiences and interfaces for
         startups, helping them acquire and retain users, other times I'm probably looking
-        for the next anime to watch or the next recipe to cook. in the meantime, feel free
-        to go through the projects i have been opportune to create.
+        for the next anime to watch or the next recipe to cook.<br />
+        in the meantime, feel free to go through the projects i have been opportune to
+        create.
       </p>
 
       <div class="projects_case" v-for="(item, index) in projects" :key="index">
@@ -52,7 +53,7 @@
             <h1 class="projects_case_about_title">{{ item.title }}</h1>
             <p class="projects_case_about_desc">{{ item.desc }}</p>
           </div>
-          <a :href="item.link"
+          <a @click="msg" :href="item.link"
             ><button class="projects_case_about_btn">view case study</button></a
           >
         </div>
@@ -104,16 +105,26 @@
         <p>
           I live by this quote, it has built me into a competent problem solving human, it
           means that no matter how difficult a situation is, i would always find a way
-          out. My name is <span>Michael Shumaker</span>, you can also call me satoshi
-          16px, i am a multi-disciplinary UI/UX designer, i have been solving design
-          problems for the past 7 years, solving web and mobile problems for over a year.
+          out.
+        </p>
+        <p>
+          My name is <span>Michael Shumaker</span>, you can also call me satoshi 16px. I
+          am a multi-disciplinary UI/UX designer, i have been solving design problems for
+          the past 7 years, solving web and mobile problems for over a year.
+        </p>
+        <p>
           As a UI/UX designer the impact of a product on the product owner and the users
           is very important to me Empathy, Testing, itterations, simplicity, and asking
-          why are always involved in my design process. Being a desiger with dyslexia is a
-          struggle and as much as i struggle, it has helped me be more patient,
-          empathetic, extremely meticulous in the details have a minimalist approach in UI
-          design and big on accesibilty. I do however enjoy, researching, unconventional
-          conversations, extreme sports, animes, cooking, and working without music.
+          why are always involved in my design process.
+        </p>
+        <p>
+          Being a desiger with dyslexia is a struggle and as much as i struggle, it has
+          helped me be more patient, empathetic, extremely meticulous in the details have
+          a minimalist approach in UI design and big on accesibilty.
+        </p>
+        <p>
+          I do however enjoy, researching, unconventional conversations, extreme sports,
+          animes, cooking, and working without music.
         </p>
         <router-link to="/resume" target="_blank">
           <button>
@@ -272,6 +283,12 @@ export default {
       },
     ]);
 
+    function msg() {
+      alert(
+        "I'm sorry i have to take you to another site to view this case study, i still owe the developer a pack of beer😩"
+      );
+    }
+
     //FORM SUBMISSION
     const name = ref("");
     const email = ref("");
@@ -297,7 +314,7 @@ export default {
       });
     }
 
-    return { testimonials, name, email, message, submitForm, ...toRefs(state) };
+    return { msg, testimonials, name, email, message, submitForm, ...toRefs(state) };
   },
 };
 </script>
