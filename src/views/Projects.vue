@@ -49,26 +49,27 @@
             </svg>
           </div>
           <router-link class="nav_link" :to="{ name: 'Projects' }">Projects</router-link>
-          <router-link class="nav_link" to="/#about">About me</router-link>
-          <router-link class="nav_link nav_cta" :to="{ name: 'Contact' }"
-            >Get in touch</router-link
-          >
+          <a class="nav_link" href="/#about">About me</a>
+          <a class="nav_link nav_cta" href="/#contact">Get in touch</a>
         </div>
-        <router-link class="nav_link nav_cta" :to="{ name: 'Contact' }"
-          >Get in touch</router-link
-        >
+        <a class="nav_link nav_cta" href="/#contact">Get in touch</a>
       </ul>
     </div>
+
     <div class="projects">
-      <h1>{{ projects.length }} Projects</h1>
+      <h1 class="h1">{{ projects.length }} Projects</h1>
+      <h1 class="load" v-if="loading">Loading...</h1>
+
       <div class="projects_case" v-for="(item, index) in projects" :key="index">
         <div class="projects_case_about">
           <div>
-            <p class="projects_case_about_tag">{{ item.tag }}</p>
+            <p class="projects_case_about_tag">UI / UX</p>
             <h1 class="projects_case_about_title">{{ item.title }}</h1>
             <p class="projects_case_about_desc">{{ item.desc }}</p>
           </div>
-          <button class="projects_case_about_btn">view case study</button>
+          <a :href="item.link"
+            ><button class="projects_case_about_btn">view case study</button></a
+          >
         </div>
         <img :src="item.img" alt="" />
       </div>
@@ -79,7 +80,8 @@
 </template>
 
 <script>
-import { ref } from "vue";
+import { db } from "@/firebase/firebaseInit";
+import { reactive, toRefs, ref } from "vue";
 
 import Foot from "../components/footer.vue";
 
@@ -88,35 +90,37 @@ export default {
     Foot,
   },
   setup() {
+    const state = reactive({
+      projects: [],
+      loading: true,
+    });
+    db.collection("projects")
+      .orderBy("id")
+      .get()
+      .then((response) => {
+        response.forEach((data) => {
+          const doc = {
+            title: data.data().title,
+            desc: data.data().desc,
+            link: data.data().link,
+            img: data.data().img,
+          };
+          state.projects.push(doc);
+          state.loading = false;
+        });
+      });
+
     const open = ref(false);
 
-    const projects = ref([
-      {
-        tag: "UI / UX",
-        title: "Project title",
-        desc: "Project summary is a b2b company that specialise in crypto........",
-        img: require("../assets/project-img.svg"),
-      },
-      {
-        tag: "UI / UX",
-        title: "Project title",
-        desc: "Project summary is a b2b company that specialise in crypto........",
-        img: require("../assets/project-img.svg"),
-      },
-      {
-        tag: "UI / UX",
-        title: "Project title",
-        desc: "Project summary is a b2b company that specialise in crypto........",
-        img: require("../assets/project-img.svg"),
-      },
-    ]);
-
-    return { projects, open };
+    return { open, ...toRefs(state) };
   },
 };
 </script>
 
 <style scoped>
+.load {
+  margin-top: 20px;
+}
 .router-link-exact-active {
   color: #2fa6ff;
 }
@@ -223,11 +227,12 @@ export default {
 
 .whole {
   background: #092133;
+  min-height: 100vh;
 }
 .nav {
   color: #f3faff;
 }
-h1 {
+.h1 {
   border-bottom: 2px solid white;
   padding-bottom: 50px;
 }

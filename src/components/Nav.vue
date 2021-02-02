@@ -48,14 +48,10 @@
           </svg>
         </div>
         <router-link class="nav_link" :to="{ name: 'Projects' }">Projects</router-link>
-        <router-link class="nav_link" to="/#about">About me</router-link>
-        <router-link class="nav_link nav_cta" :to="{ name: 'Contact' }"
-          >Get in touch</router-link
-        >
+        <a class="nav_link" href="/#about">About me</a>
+        <a class="nav_link nav_cta" href="/#contact">Get in touch</a>
       </div>
-      <router-link class="nav_link nav_cta" :to="{ name: 'Contact' }"
-        >Get in touch</router-link
-      >
+      <a class="nav_link nav_cta" href="/#contact">Get in touch</a>
     </ul>
   </div>
 </template>
