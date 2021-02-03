@@ -33,6 +33,7 @@ export default {};
 .socials img {
   margin-right: 30px;
   mix-blend-mode: difference;
+  z-index: 20;
 }
 .misc {
   text-align: right;
@@ -44,6 +45,7 @@ export default {};
   mix-blend-mode: difference;
   color: white;
   text-decoration: none;
+  z-index: 20;
 }
 @media (max-width: 482px) {
   .footer {
