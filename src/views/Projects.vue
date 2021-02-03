@@ -75,7 +75,7 @@
       </div>
     </div>
 
-    <Foot />
+    <Foot class="foot" />
   </div>
 </template>
 
@@ -239,7 +239,7 @@ button {
   background: #092133;
   min-height: 100vh;
 }
-.nav {
+.foot {
   color: #f3faff;
 }
 .h1 {
