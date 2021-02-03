@@ -75,7 +75,7 @@
       </div>
     </div>
 
-    <Foot class="nav" />
+    <Foot />
   </div>
 </template>
 
@@ -140,7 +140,7 @@ button {
   min-height: 15vh;
   width: 1200px;
   margin: auto;
-  z-index: 7000px;
+  z-index: 7000;
 }
 @media (max-width: 1270px) {
   .nav,
