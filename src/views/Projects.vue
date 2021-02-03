@@ -140,6 +140,7 @@ button {
   min-height: 15vh;
   width: 1200px;
   margin: auto;
+  z-index: 7000px;
 }
 @media (max-width: 1270px) {
   .nav,
