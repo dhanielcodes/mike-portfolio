@@ -111,7 +111,7 @@ export default {
             link: data.data().link,
             img: data.data().img,
           };
-          state.projects.push(doc);
+          state.projects.unshift(doc);
           state.loading = false;
         });
       });
