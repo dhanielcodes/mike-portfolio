@@ -423,7 +423,7 @@ button {
   font-size: 24px;
 }
 .projects_case_about_desc{
-  font-size: 14px;
+  font-size: 11px;
 }
 .projects_case_about_btn {
   padding: 20px 23px;
