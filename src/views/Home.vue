@@ -447,7 +447,7 @@ button {
 .says {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  grid-gap: 20px;
+  grid-gap: 32px;
   padding: 50px 0px;
   width: 600px;
   margin: 40px auto;
@@ -680,7 +680,7 @@ button {
   .says {
     display: grid;
     grid-template-columns: repeat(1, 1fr);
-    grid-gap: 20px;
+    grid-gap: 32px;
     padding: 50px 0px;
     width: 90%;
     margin: 40px auto;
