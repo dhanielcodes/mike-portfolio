@@ -369,7 +369,6 @@ button {
   color: #f3faff;
   padding: 50px 200px;
   width: 100%;
-  height: 500px;
 }
 .projects_heading {
   color: white;
@@ -385,6 +384,7 @@ button {
   justify-content: space-evenly;
   margin: 50px 0;
   width: 100%;
+  min-height: 360px;
   min-height: auto;
   border-radius: 10px;
   overflow: hidden;
