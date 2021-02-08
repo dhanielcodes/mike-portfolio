@@ -27,7 +27,7 @@
         I am <span>Michael Shumaker</span>
         a passionate multidisciplinary UI / UX designer with dyslexia, but most of all I
         am interested in the process, outcomes and the behavioural changes the solutions I
-        create have in both user’s, stakeholder, and how it affects their lives.
+        create have in both users, stakeholders and how it affects their lives.
       </p>
     </div>
     <div class="scroll">
@@ -37,14 +37,6 @@
     <!-- Projects -->
     <div class="projects">
       <h1 class="projects_heading">What I have been up to</h1>
-
-      <p class="projects_p">
-        Asides the times I am building amazing user experiences and interfaces for
-        startups, helping them acquire and retain users, other times I'm probably looking
-        for the next anime to watch or the next recipe to cook.<br />
-        in the meantime, feel free to go through the projects i have been opportune to
-        create.
-      </p>
 
       <div class="projects_case" v-for="(item, index) in projects" :key="index">
         <div class="projects_case_about">
@@ -81,7 +73,7 @@
       </a>
     </div>
     <div class="testimonials">
-      <h1>Testimonials</h1>
+      <h1>Latest feedback</h1>
       <div class="says">
         <div class="say" v-for="(item, index) in testimonials" :key="index">
           <div class="say_person">
@@ -104,21 +96,21 @@
         <p>“Everything is figure-out-able”</p>
         <p>
           I live by this quote, it has built me into a competent problem solving human, it
-          means that no matter how difficult a situation is, i would always find a way
+          means that no matter how difficult a situation is, I would always find a way
           out.
         </p>
         <p>
           My name is <span>Michael Shumaker</span>, you can also call me satoshi 16px. I
-          am a multi-disciplinary UI/UX designer, i have been solving design problems for
+          am a multi-disciplinary UI/UX designer, I have been solving design problems for
           the past 7 years, solving web and mobile problems for over a year.
         </p>
         <p>
           As a UI/UX designer the impact of a product on the product owner and the users
-          is very important to me Empathy, Testing, itterations, simplicity, and asking
+          is very important to me Empathy, Testing, iterations, simplicity, and asking
           why are always involved in my design process.
         </p>
         <p>
-          Being a desiger with dyslexia is a struggle and as much as i struggle, it has
+          Being a desiger with dyslexia is a struggle and as much as I struggle, it has
           helped me be more patient, empathetic, extremely meticulous in the details have
           a minimalist approach in UI design and big on accesibilty.
         </p>
@@ -402,6 +394,7 @@ button {
   justify-content: space-evenly;
   margin: 50px 0;
   width: 100%;
+  min-height: auto;
   border-radius: 10px;
   overflow: hidden;
 }
@@ -409,6 +402,7 @@ button {
   background: #f3faff;
   color: #092133;
   width: 40%;
+  height: 100%;
   padding: 40px;
   display: flex;
   justify-content: space-between;
@@ -422,8 +416,9 @@ button {
 .projects_case_about_title {
   font-size: 24px;
 }
-.projects_case_about_desc{
+.projects_case_about_desc {
   font-size: 16px;
+  margin-bottom: 20px;
 }
 .projects_case_about_btn {
   padding: 20px 23px;
@@ -477,7 +472,7 @@ button {
 }
 .say {
   padding: 20px;
-  background: white;
+  background: none;
   width: 100%;
   height: 200px;
   display: flex;
@@ -580,7 +575,7 @@ button {
   .about {
     width: 92%;
   }
-  .projects_case_about_desc{
+  .projects_case_about_desc {
     font-size: 12px;
   }
 }
