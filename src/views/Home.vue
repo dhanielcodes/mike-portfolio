@@ -393,7 +393,7 @@ button {
   background: #f3faff;
   color: #092133;
   width: 40%;
-  height: 100%;
+  min-height: 360px;
   padding: 40px;
   display: flex;
   justify-content: space-between;
