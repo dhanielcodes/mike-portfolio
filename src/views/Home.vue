@@ -449,7 +449,7 @@ button {
   grid-template-columns: repeat(2, 1fr);
   grid-gap: 20px;
   padding: 50px 0px;
-  width: 80%;
+  width: 60%;
   margin: 40px auto;
   overflow: hidden;
   overflow-x: scroll;
@@ -669,10 +669,10 @@ button {
 @media (max-width: 468px) {
   .says {
     display: grid;
-    grid-template-columns: repeat(4, 100%);
+    grid-template-columns: repeat(1, 1fr);
     grid-gap: 20px;
     padding: 50px 0px;
-    width: 95%;
+    width: 90%;
     margin: 40px auto;
     overflow: hidden;
     overflow-x: scroll;
