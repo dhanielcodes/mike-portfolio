@@ -447,7 +447,7 @@ button {
 .says {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  grid-gap: 32px;
+  grid-gap: 48px;
   padding: 50px 0px;
   width: 600px;
   margin: 40px auto;
