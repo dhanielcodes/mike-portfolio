@@ -369,6 +369,7 @@ button {
   color: #f3faff;
   padding: 50px 200px;
   width: 100%;
+  height: 500px;
 }
 .projects_heading {
   color: white;
@@ -445,7 +446,7 @@ button {
 }
 .says {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(2, 1fr);
   grid-gap: 20px;
   padding: 50px 0px;
   width: 80%;
