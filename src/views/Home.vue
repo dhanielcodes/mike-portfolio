@@ -668,7 +668,7 @@ button {
   .says {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    grid-gap: 20px;
+    grid-gap: 32px;
     padding: 50px 0px;
     width: 75%;
     margin: 40px auto;
