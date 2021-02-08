@@ -449,7 +449,7 @@ button {
   grid-template-columns: repeat(2, 1fr);
   grid-gap: 20px;
   padding: 50px 0px;
-  width: 60%;
+  width: 600px;
   margin: 40px auto;
   overflow: hidden;
   overflow-x: scroll;
@@ -664,6 +664,16 @@ button {
   .projects_case_about_btn {
     font-size: 14px;
     padding: 15px;
+  }
+  .says {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 20px;
+    padding: 50px 0px;
+    width: 75%;
+    margin: 40px auto;
+    overflow: hidden;
+    overflow-x: scroll;
   }
 }
 @media (max-width: 468px) {
