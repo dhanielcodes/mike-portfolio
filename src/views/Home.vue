@@ -18,7 +18,7 @@
           designer with dyslexia, but most of all I am <br />
           interested in the process, outcomes and the<br />
           behavioural changes the solutions I create <br />
-          have in both user’s, stakeholder, and how it <br />
+          have in both users, stakeholders and how it <br />
           affects their lives.
         </p>
       </div>
@@ -106,13 +106,13 @@
         </p>
         <p>
           As a UI/UX designer the impact of a product on the product owner and the users
-          is very important to me Empathy, Testing, iterations, simplicity, and asking
-          why are always involved in my design process.
+          is very important to me Empathy, Testing, iterations, simplicity, and asking why
+          are always involved in my design process.
         </p>
         <p>
           Being a desiger with dyslexia is a struggle and as much as I struggle, it has
-          helped me be more patient, empathetic, extremely meticulous in the details have
-          a minimalist approach in UI design and big on accesibilty.
+          helped me be more patient, empathetic, extremely meticulous in the details, have
+          a minimalist approach in UI design and big on accessability.
         </p>
         <p>
           I do however enjoy, researching, unconventional conversations, extreme sports,
@@ -253,16 +253,6 @@ export default {
       });
 
     const testimonials = ref([
-      {
-        desc: " “He is very meticuluos with his process it was fun working with him”",
-        name: "John Ruffalo",
-        occupation: "CEO Ron corp",
-      },
-      {
-        desc: " “He is very meticuluos with his process it was fun working with him”",
-        name: "John Ruffalo",
-        occupation: "CEO Ron corp",
-      },
       {
         desc: " “He is very meticuluos with his process it was fun working with him”",
         name: "John Ruffalo",
@@ -455,7 +445,7 @@ button {
 }
 .says {
   display: grid;
-  grid-template-columns: repeat(4, 320px);
+  grid-template-columns: repeat(4, 1fr);
   grid-gap: 20px;
   padding: 50px 0px;
   width: 80%;
@@ -479,7 +469,6 @@ button {
   flex-direction: column;
   justify-content: space-between;
   border-radius: 10px;
-  box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.118);
 }
 .say_person {
   display: flex;
