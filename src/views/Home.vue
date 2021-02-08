@@ -75,16 +75,16 @@
     <div class="testimonials">
       <h1>Latest feedback</h1>
       <div class="says">
-        <div class="say" v-for="(item, index) in testimonials" :key="index">
+        <div class="say" v-for="(item, index) in reviews" :key="index">
           <div class="say_person">
-            <img src="../assets/test.png" alt="" srcset="" />
+            <img :src="item.img" alt="" srcset="" />
             <div class="says_person_name">
               <h5>{{ item.name }}</h5>
-              <p>{{ item.occupation }}</p>
+              <p>{{ item.job }}</p>
             </div>
           </div>
           <p class="say_desc">
-            {{ item.desc }}
+            {{ item.note }}
           </p>
         </div>
       </div>
@@ -233,6 +233,7 @@ export default {
   setup() {
     const state = reactive({
       projects: [],
+      reviews: [],
       loading: true,
       sent: false,
     });
@@ -248,7 +249,21 @@ export default {
             img: data.data().img,
           };
           state.projects.unshift(doc);
-          state.loading = false;
+        });
+      });
+
+    db.collection("feedback")
+      .orderBy("id")
+      .get()
+      .then((response) => {
+        response.forEach((data) => {
+          const doc = {
+            name: data.data().name,
+            job: data.data().job,
+            note: data.data().note,
+            img: data.data().img,
+          };
+          state.reviews.unshift(doc);
         });
       });
 
